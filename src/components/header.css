@@ -1,0 +1,22 @@
+body {
+  padding-top: 6%;
+
+}
+
+  .containerfluid {
+    padding-top: 2%;
+  }
+
+  .table {
+    text-align: center;
+  }
+
+  .addbtn {
+      justify-self: center;
+        width: 50%;
+  }
+
+#basic-addon1 {
+  width: 10%;
+  font-weight: 500;
+}

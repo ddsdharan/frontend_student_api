@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Header from "./components/Header.js";
+import Formpage from "./components/Formpage.js";
+import "./App.css";
 
 function App() {
+  const student = [];
+  let [students, setStudents] = useState(student);
+  let getstudent = async () => {
+    let response = await fetch(
+      "http://localhost:5000/getallstudents",
+      {
+        method: "GET",
+        headers: {
+          "Access-Control-Allow-Origin": true,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    let studnets = await response.json();
+    setStudents(studnets);
+  };
+
+  useEffect(() => {
+    getstudent();
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Formpage students={students} setStudents={setStudents} />
     </div>
   );
 }
