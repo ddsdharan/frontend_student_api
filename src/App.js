@@ -8,7 +8,7 @@ function App() {
   let [students, setStudents] = useState(student);
   let getstudent = async () => {
     let response = await fetch(
-      "https://crud-student-api-server.onrender.com0/getallstudents",
+      "https://crud-student-api-server.onrender.com/getallstudents",
       {
         method: "GET",
         headers: {

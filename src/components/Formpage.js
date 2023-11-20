@@ -26,7 +26,7 @@ function Formpage(props) {
         }
 
         let response = await fetch(
-            "https://crud-student-api-server.onrender.com0/addstudent",
+            "https://crud-student-api-server.onrender.com/addstudent",
             {
                 method: "POST",
                 headers: {

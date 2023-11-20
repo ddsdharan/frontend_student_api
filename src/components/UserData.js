@@ -14,7 +14,7 @@ function UserData(props) {
 
     let handleDelete = async (id) => {
         let response = await fetch(
-            `https://crud-student-api-server.onrender.com0/deletestudent/${id}`,
+            `https://crud-student-api-server.onrender.com/deletestudent/${id}`,
             {
                 method: "DELETE",
                 headers: {
@@ -33,7 +33,7 @@ function UserData(props) {
 
     const handleUpdate = async (id) => {
         const response = await fetch(
-            `https://crud-student-api-server.onrender.com0/updatestudent/${id}`,
+            `https://crud-student-api-server.onrender.com/updatestudent/${id}`,
             {
                 method: "PUT",
                 headers: {
